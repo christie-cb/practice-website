@@ -1,51 +1,70 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script>
-        $(document).ready(function(){
-            $("form").submit(function() {
-                var pupName = $('#pupid').val();
-                var alertMessage = "We love " + pupName;
-                alert(alertMessage);
-            });
-            $(function(){
-                $("#navigation").load("navbar.html"); 
-            });
+  <head>
+    <script src="joke.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        $("form").submit(function () {
+          var pupName = $("#pupid").val();
+          var alertMessage = "We love " + pupName;
+          alert(alertMessage);
         });
-        </script>
-        <link rel="stylesheet" href="styles.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com"> 
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-        <link href="https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div id="navigation"></div>
-        <h1>Hola world.</h1>
-        <p>I know what you're probably thinking.<p>
-        <p>
-            <font color="PaleVioletRed">
-                But, Christie! We already know this stuff!
-            </font>
-        </p>
-        <p>
-        Yes... But how do you know that you know? 
-        Do you know what you don't know? 
-        Didn't think so.
-        </p>
-        <a class="button" href="https://linkedin.com/in/ccbeauchamp/">
-            Check out my LI if you fancy it.
-        </a>
-        <br>
+        $(function () {
+          $("#navigation").load("navbar.html");
+        });
+      });
+    </script>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Azeret+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="navigation"></div>
+    <h1>Hola world.</h1>
+    <p>What is this wonderful place? Why was it created?</p>
+    <p></p>
+    <p>
+      <font color="PaleVioletRed">
+        Because a girl named Christie wanted to test her understanding of CSS
+        flexboxes.
+      </font>
+    </p>
+    <a class="button" href="https://linkedin.com/in/ccbeauchamp/">
+      Check out my LI if you fancy it.
+    </a>
+    <div
+      style="display: flex; flex: row nowrap; justify-content: space-between"
+    >
+      <div style="display: flex; flex-direction: column; width: 100%">
+        <h2>Tell me a joke.</h2>
+        <button style="flex-basis:10%;" type="submit" onclick="GetDadJoke()">lol</button>
+      </div>
+      <div style="display: flex; flex-direction: column; width: 100%">
         <h2>Peep this puppy.</h2>
-        <div style="display: flex; justify-content: space-evenly">
-            <img src="https://i.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U">
-            <form id="myForm">
-                <p>What shall we name him?</p>
-                <input type="text" name="pupname" id="pupid">
-                <input type="submit">
-            </form>
-            <div id="myResultDiv"></div>
+        <div
+          style="
+            display: flex;
+            justify-content: space-evenly;
+            flex-direction: row;
+          "
+        >
+          <img
+            style="margin-right: 5px"
+            src="https://i.picsum.photos/id/237/200/300.jpg?hmac=TmmQSbShHz9CdQm0NkEjx1Dyh_Y984R9LpNrpvH2D_U"
+          />
+          <form id="myForm">
+            <p>What shall we name him?</p>
+            <input type="text" name="pupname" id="pupid" />
+            <input type="submit" />
+          </form>
+          <div id="myResultDiv"></div>
         </div>
-    </body>
+      </div>
+    </div>
+  </body>
 </html>

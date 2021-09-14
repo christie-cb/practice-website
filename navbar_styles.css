@@ -7,9 +7,8 @@ li {
 }
 
 a {
-    background-color: white;
-    padding: 20px;
-    margin: 10px;
+    padding-right: 20px;
+    margin-right: 10px;
 }
 
 a:hover {

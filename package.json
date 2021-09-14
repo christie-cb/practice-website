@@ -1,0 +1,22 @@
+{
+  "name": "w3_html_tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/cbeaup99/practice_website.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/cbeaup99/practice_website/issues"
+  },
+  "homepage": "https://gitlab.com/cbeaup99/practice_website#readme",
+  "devDependencies": {
+    "jest": "^27.2.0"
+  }
+}

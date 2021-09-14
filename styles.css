@@ -38,7 +38,7 @@ p {
 }
 
 .button:link {
-    color:lightblue;
+    color:var(--ferra);
 }
 
 .button:visited {

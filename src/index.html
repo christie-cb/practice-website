@@ -10,6 +10,17 @@
           var alertMessage = "We love " + pupName;
           alert(alertMessage);
         });
+        $("button").click(function () {
+            var joke = getApiData().then(
+                function(value) {
+                    $('#api_data').text(value.joke);
+                },
+                function(error) {
+                    console.log(error);
+                }
+            );
+        });
+
         $(function () {
           $("#navigation").load("navbar.html");
         });
@@ -27,12 +38,9 @@
     <div id="navigation"></div>
     <h1>Hola world.</h1>
     <p>What is this wonderful place? Why was it created?</p>
-    <p></p>
     <p>
-      <font color="PaleVioletRed">
         Because a girl named Christie wanted to test her understanding of CSS
         flexboxes.
-      </font>
     </p>
     <a class="button" href="https://linkedin.com/in/ccbeauchamp/">
       Check out my LI if you fancy it.
@@ -40,9 +48,10 @@
     <div
       style="display: flex; flex: row nowrap; justify-content: space-between"
     >
-      <div style="display: flex; flex-direction: column; width: 100%">
+      <div style="display: flex; flex-direction: column; width: 100%; margin-right: 10px;">
         <h2>Tell me a joke.</h2>
-        <button style="flex-basis:10%;" type="submit" onclick="GetDadJoke()">lol</button>
+        <button style="align-self: center; width:20%;" type="submit" onclick="getApiData()">lol</button>
+        <span id="api_data"></span>
       </div>
       <div style="display: flex; flex-direction: column; width: 100%">
         <h2>Peep this puppy.</h2>
